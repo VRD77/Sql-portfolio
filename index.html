@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL Portfolio | Vimmy Roy</title>
+  <meta name="description" content="SQL Portfolio showcasing database projects and query skills by a college student."/>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">Vimmy Roy — SQL</span>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#queries">Queries</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <span class="hero-tag">B.Tech CSE &nbsp;·&nbsp; Database Projects &nbsp;·&nbsp; Open to Intern</span>
+      <h1>Hi, I'm Vimmy.<br><span class="highlight">I work with SQL.</span></h1>
+      <p class="hero-sub">
+        I've been building database projects using MySQL &amp; PostgreSQL.<br>
+        Below is a showcase of what I've put together so far.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#queries" class="btn-ghost">Browse Queries</a>
+      </div>
+    </div>
+
+    <div class="hero-code">
+      <div class="code-window">
+        <div class="code-bar">
+          <div class="code-bar-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="code-bar-title">query.sql</span>
+        </div>
+        <pre class="code-body"><code><span class="comment">-- find the best student</span>
+
+<span class="kw">SELECT</span>
+  name,
+  branch,
+  skills
+<span class="kw">FROM</span>   students
+<span class="kw">WHERE</span>  passion = <span class="str">'databases'</span>
+  <span class="kw">AND</span>  year = <span class="num">3</span>
+<span class="kw">ORDER BY</span> gpa <span class="kw">DESC</span>
+<span class="kw">LIMIT</span>  <span class="num">1</span><span class="punct">;</span>
+
+<span class="comment">-- result: Vimmy Roy</span></code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+
+      <h2 class="section-title">About</h2>
+      <p class="section-sub">A bit about who I am</p>
+
+      <div class="about-grid">
+        <div class="about-card" data-num="01">
+          <h3>College Student</h3>
+          <p>Pursuing B.Tech in Computer Science. Databases became genuinely interesting to me beyond just the course.</p>
+        </div>
+        <div class="about-card" data-num="02">
+          <h3>Self Taught</h3>
+          <p>Practiced on W3Schools, HackerRank SQL challenges, and LeetCode problems in my free time.</p>
+        </div>
+        <div class="about-card" data-num="03">
+          <h3>Project Builder</h3>
+          <p>Built 3 mini database projects from scratch — a library system, student tracker, and e-commerce schema.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-inner">
+
+      <h2 class="section-title">Skills</h2>
+      <p class="section-sub">SQL concepts I know and have used</p>
+
+      <div class="skills-grid">
+        <div class="skill-pill">SELECT</div>
+        <div class="skill-pill">WHERE</div>
+        <div class="skill-pill">ORDER BY</div>
+        <div class="skill-pill">INNER JOIN</div>
+        <div class="skill-pill">LEFT JOIN</div>
+        <div class="skill-pill">GROUP BY</div>
+        <div class="skill-pill">HAVING</div>
+        <div class="skill-pill">Subqueries</div>
+        <div class="skill-pill">AVG / SUM / COUNT</div>
+        <div class="skill-pill">CREATE TABLE</div>
+        <div class="skill-pill">ALTER / DROP</div>
+        <div class="skill-pill">INSERT / UPDATE</div>
+        <div class="skill-pill">Primary Keys</div>
+        <div class="skill-pill">Foreign Keys</div>
+        <div class="skill-pill">Indexes</div>
+        <div class="skill-pill">Views</div>
+        <div class="skill-pill">Stored Procedures</div>
+        <div class="skill-pill">CASE / WHEN</div>
+        <div class="skill-pill">Window Functions</div>
+        <div class="skill-pill">MySQL</div>
+        <div class="skill-pill">PostgreSQL</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-inner">
+
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">3 mini database projects I built</p>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-badge">MySQL</div>
+          <h3>Library Management</h3>
+          <p>Tracks books, members, loan records, and calculates fines for overdue returns.</p>
+          <ul class="project-features">
+            <li>Books, Members, Loans, Fines tables</li>
+            <li>JOIN queries across multiple tables</li>
+            <li>Stored procedure for fine calculation</li>
+            <li>VIEW for active overdue loans</li>
+          </ul>
+          <a href="#queries" class="project-link" data-project="library">View Queries →</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-badge">PostgreSQL</div>
+          <h3>Student Result Tracker</h3>
+          <p>Manages marks and subjects, assigns grades with CASE logic, and ranks students.</p>
+          <ul class="project-features">
+            <li>Students, Subjects, Marks tables</li>
+            <li>CASE statements for grade logic</li>
+            <li>AVG / MIN / MAX aggregates</li>
+            <li>RANK() window function</li>
+          </ul>
+          <a href="#queries" class="project-link" data-project="student">View Queries →</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-badge">MySQL</div>
+          <h3>E-Commerce Schema</h3>
+          <p>Basic e-commerce database with products, customers, orders, and revenue reports.</p>
+          <ul class="project-features">
+            <li>Customers, Products, Orders tables</li>
+            <li>Foreign key relationships</li>
+            <li>Revenue via GROUP BY / HAVING</li>
+            <li>Top customers by total spend</li>
+          </ul>
+          <a href="#queries" class="project-link" data-project="ecommerce">View Queries →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUERY VIEWER -->
+  <section id="queries">
+    <div class="section-inner">
+
+      <h2 class="section-title">Query Viewer</h2>
+      <p class="section-sub">Real SQL I wrote — click to explore</p>
+
+      <div class="query-tabs">
+        <button class="tab-btn active" data-tab="library">Library</button>
+        <button class="tab-btn" data-tab="student">Student</button>
+        <button class="tab-btn" data-tab="ecommerce">E-Commerce</button>
+      </div>
+
+      <div class="query-viewer">
+        <div class="qv-sidebar" id="query-list"></div>
+        <div class="qv-panel">
+          <div class="qv-header">
+            <span id="query-label">select a query from the left</span>
+            <button id="copy-btn" onclick="copyQuery()">Copy</button>
+          </div>
+          <pre class="qv-code"><code id="query-code"><span class="comment">-- select a query from the sidebar</span></code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner contact-inner">
+
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">Open to internships and part-time roles</p>
+
+      <div class="contact-links">
+        <a href="mailto:vimmyroy@example.com" class="contact-chip">Email Me</a>
+        <a href="https://github.com/" target="_blank" class="contact-chip">GitHub</a>
+        <a href="https://linkedin.com/" target="_blank" class="contact-chip">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Vimmy Roy &nbsp;·&nbsp; SQL Portfolio &nbsp;·&nbsp; 2024</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
